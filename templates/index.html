@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Expense Tracker</title>
-</head>
-<body>
-    <h1>💰 Expense Tracker</h1>
-    <p>Welcome to your Flask-based expense tracker.</p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Home | Expense Tracker{% endblock %}
+
+{% block content %}
+<p>Welcome to your Flask-based expense tracker.</p>
+{% endblock %}
+
