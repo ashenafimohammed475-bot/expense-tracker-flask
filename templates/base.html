@@ -3,14 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Expense Tracker{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='static.css') }}">
 </head>
 <body>
+
+<div class="container">
     <header>
         <h1>💰 Expense Tracker</h1>
+
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a> |
+            <a href="{{ url_for('add_expense') }}">Add Expense</a>
+        </nav>
+
         <hr>
     </header>
 
-    {% block content %}{% endblock %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p class="footer-text">
+            Built with Flask by Mohammed 🚀
+        </p>
+    </footer>
+</div>
 
 </body>
 </html>

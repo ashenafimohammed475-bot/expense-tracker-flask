@@ -1,8 +1,23 @@
 {% extends "base.html" %}
 
-{% block title %}Home | Expense Tracker{% endblock %}
-
 {% block content %}
-<p>Welcome to your Flask-based expense tracker.</p>
-{% endblock %}
+<h2>All Expenses</h2>
 
+<table border="1">
+    <tr>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Description</th>
+    </tr>
+
+    {% for e in expenses %}
+    <tr>
+        <td>{{ e[0] }}</td>
+        <td>{{ e[1] }}</td>
+        <td>{{ e[2] }}</td>
+        <td>{{ e[3] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
